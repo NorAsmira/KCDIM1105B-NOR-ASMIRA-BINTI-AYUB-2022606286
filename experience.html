@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> <!-- Calligraphy Font -->
+    <link href="about.css" rel="stylesheet">
+    <style>
+        /* Navigation Bar Styling */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav audio {
+            margin-left: 1rem;
+        }
+
+        /* Body Content */
+        body {
+            background-color: #E6F3FF !important;
+            margin-top: 80px;
+        }
+
+        /* Experience Section */
+        .experience-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96); /* Pastel Gradient Background */
+            color: white;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+            font-family: 'Quicksand', sans-serif;
+            min-height: 100vh;
+            background-size: 200% 200%;
+            background-position: 0 0;
+            animation: gradientMove 5s ease infinite; /* Smooth gradient animation */
+        }
+
+        /* Experience Title */
+        .experience-section h1 {
+            font-family: 'Dancing Script', cursive; /* Calligraphy font */
+            font-size: 4.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff7e5f;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+            animation: fadeInTitle 1s ease-in-out;
+        }
+
+        /* Container for all experience cards */
+        .experience-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* Individual experience card styling */
+        .experience-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Experience Card Heading */
+        .experience-card h2 {
+            font-size: 2.5rem;
+            font-family: 'Dancing Script', cursive;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Experience Role */
+        .experience-role {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Experience Details Styling */
+        .experience-details {
+            display: none;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #fff;
+            text-align: left;
+            transition: all 0.4s ease;
+        }
+
+        /* Show experience details on hover */
+        .experience-card:hover .experience-details {
+            display: block;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animation for experience title */
+        @keyframes fadeInTitle {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Gradient Animation */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 200% 200%;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div style="display: flex; align-items: center;">
+            <img src="./img/logo.jpg" alt="Logo" class="logo" style="margin-right: 2rem;">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <audio controls>
+            <source src="./img/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </nav>
+
+    <div class="content experience-section">
+        <h1>Experience</h1>
+        <div class="experience-container">
+            <!-- Experience Card 1 -->
+            <div class="experience-card">
+                <h2>Intern - Maybank</h2>
+                <p class="experience-role">Group Community Financial Services</p>
+                <div class="experience-details">
+                    <p>During my internship at Maybank, I gained valuable insights into community financial services, including data management, customer relations, and digital banking strategies.</p>
+                    <p>Played an integral role in project planning and execution by collaborating closely with team members to ensure smooth workflow, effectively managing tasks, and preparing detailed and visually engaging presentations for management meetings to support decision-making processes.</p>
+                </div>
+            </div>
+            <!-- Experience Card 2 -->
+            <div class="experience-card">
+                <h2>Contract - FLEX</h2>
+                <p class="experience-role">Assembly Worker</p>
+                <div class="experience-details">
+                    <p>Ensures careful assembly of electronic components, adhering to strict quality control protocols to minimize errors. This process includes conducting thorough visual inspections, functional testing, and automated checks to detect defects early.</p>
+                    <p>Consistently meet production targets in excess of one thousand outputs by prioritizing tasks and managing time effectively under pressure.</p>
+
+                    <p>Follows  established  assembly  line  procedures, ensuring  efficient  production  flow  and compliance with safety regulations..</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+                <div class="work-images">
+                    <img src="./img/work-experience-1.jpg" alt="Work Experience 1">
+                    <img src="./img/work-experience-2.jpg" alt="Work Experience 2">
+                    <img src="./img/work-experience-3.jpg" alt="Work Experience 3">
+                    <img src="./img/work-experience-4.jpg" alt="Work Experience 4">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nor Asmira. All rights reserved.</p>
+    </footer>
+</body>
+
+</body>
+
+</html>

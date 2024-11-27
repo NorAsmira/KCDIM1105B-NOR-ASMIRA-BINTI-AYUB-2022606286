@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports - Nor Asmira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="about.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #E0FFFF;
+        }
+
+        /* General card and image styles */
+        .card {
+            border: 2px solid #ccc;
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: #fff;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-grid {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.1);
+        }
+
+        .card .hidden-content {
+            opacity: 0;
+            transform: translateY(20px);
+            visibility: hidden;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 8px;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .card:hover .hidden-content {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .modal:target {
+            display: flex; /* Show modal when image is clicked */
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Fancy Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav style="display: flex; align-items: center; justify-content: space-between; padding: 1rem;">
+        <div style="display: flex; align-items: center;">
+            <img src="./img/logo.jpg" alt="Logo" class="logo" style="margin-right: 2rem;">
+            <ul style="display: flex; list-style: none; gap: 2rem; margin: 0;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="experience.html">experience</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <audio controls>
+            <source src="./img/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </nav>
+
+    <main class="container">
+
+        <section id="sport">
+            <h2>Sports</h2>
+            <p class="text-center">In sports, every challenge is an opportunity to learn something new, and I apply the
+                lessons from each game to my personal and professional life.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Archery</h3>
+                    <div class="image-grid">
+                        <a href="#archery-modal"><img src="./img/archery-1.jpg" alt="Archery Practice"></a>
+                        <a href="#archery-modal"><img src="./img/archery-2.jpg" alt="Archery Competition"></a>
+                    </div>
+                    <p class="text-muted">I deeply enjoy archery because it combines focus, discipline, and precision. The challenge of
+                        aiming for the perfect shot not only tests physical skills but also enhances mental
+                        concentration, making it both relaxing and rewarding.</p>
+                    <div class="hidden-content">
+                        <p>Archery is all about precision, patience, and mental clarity. It's one of the most rewarding sports for those who enjoy a calm but challenging activity.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Badminton</h3>
+                    <div class="image-grid">
+                        <a href="#badminton-modal"><img src="./img/badminton-1.jpg" alt="Badminton Practice"></a>
+                        <a href="#badminton-modal"><img src="./img/badminton-2.jpg" alt="Badminton Match"></a>
+                    </div>
+                    <p class="text-muted">Playing badminton is an exciting way to stay active and improve physical fitness. The fast-paced
+                        rallies, quick reflexes, and strategic gameplay make it a dynamic sport that keeps the body and
+                        mind sharp.</p>
+                    <div class="hidden-content">
+                        <p>Badminton is a fast-paced sport that requires agility and strategy. It helps improve cardiovascular health, reflexes, and overall fitness.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Chess</h3>
+                    <div class="image-grid">
+                        <a href="#chess-modal"><img src="./img/chess-1.jpg" alt="Chess Strategy"></a>
+                        <a href="#chess-modal"><img src="./img/chess-2.jpg" alt="Chess Tournament"></a>
+                    </div>
+                    <p class="text-muted">A strategic thinker with a love for chess, where every move requires careful planning and
+                        foresight. Engaging in competitive chess has strengthened my ability to anticipate challenges,
+                        think critically, and remain focused under pressure.</p>
+                    <div class="hidden-content">
+                        <p>Chess is a game of strategy, requiring focus, planning, and adaptability. It sharpens the mind and teaches valuable lessons about thinking ahead and problem-solving.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal for Archery -->
+        <div id="archery-modal" class="modal">
+            <span class="modal-close" onclick="window.location.href='sports.html'">&times;</span>
+            <img src="./img/archery-1.jpg" alt="Archery Modal">
+        </div>
+
+        <!-- Modal for Badminton -->
+        <div id="badminton-modal" class="modal">
+            <span class="modal-close" onclick="window.location.href='sports.html'">&times;</span>
+            <img src="./img/badminton-1.jpg" alt="Badminton Modal">
+        </div>
+
+        <!-- Modal for Chess -->
+        <div id="chess-modal" class="modal">
+            <span class="modal-close" onclick="window.location.href='sports.html'">&times;</span>
+            <img src="./img/chess-1.jpg" alt="Chess Modal">
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nor Asmira. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

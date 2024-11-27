@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Nor Asmira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="about.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #F0FFF0;
+        }
+
+        /* Skill Item */
+        .skill-item {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .skill-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+            background: linear-gradient(to right, #ffecd2, #fcb69f); /* Gradient hover effect */
+        }
+
+        .skill-item:hover h3 {
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav style="display: flex; align-items: center; justify-content: space-between; padding: 1rem;">
+        <div style="display: flex; align-items: center;">
+            <img src="./img/logo.jpg" alt="Logo" class="logo" style="margin-right: 2rem;">
+            <ul style="display: flex; list-style: none; gap: 2rem; margin: 0;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="experience.html">experience</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <audio controls>
+            <source src="./img/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </nav>
+
+    <main class="container">
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card skill-item">
+                    <h3>Keen Eye</h3>
+                    <p class="text-muted">Have a keen eye for detail and a strong analytical mindset, which helps me approach tasks
+                        systematically and efficiently. My communication skills enable me to present ideas clearly,
+                        whether in writing or verbally, and my organizational skills allow me to stay on top of
+                        priorities and deadlines.</p>
+                    <div class="skill-images">
+                        <img src="./img/skill-1.jpg" alt="Analytical Skills">
+                    </div>
+                </div>
+                <div class="skill-card skill-item">
+                    <h3>Emotional Intelligence</h3>
+                    <p class="text-muted">I possess a strong sense of emotional awareness, both in understanding my own feelings and
+                        empathizing with others. This helps me build meaningful relationships, navigate difficult
+                        situations with grace, and maintain positive communication in team settings.</p>
+                    <div class="skill-images">
+                        <img src="./img/skill-2.jpg" alt="Emotional Intelligence">
+                    </div>
+                </div>
+                <div class="skill-card skill-item">
+                    <h3>Adaptability</h3>
+                    <p class="text-muted">Comfortable with change and can adjust quickly to new environments, tasks, or challenges. Whether
+                        it's learning a new system, shifting priorities, or adapting to unforeseen circumstances, I stay
+                        flexible and maintain a positive attitude.</p>
+                    <div class="skill-images">
+                        <img src="./img/skill-3.jpg" alt="Adaptability">
+                    </div>
+                </div>
+                <div class="skill-card skill-item">
+                    <h3>Self-Discipline</h3>
+                    <p class="text-muted">Highly focused and driven, able to stay on task and avoid distractions to meet deadlines and
+                        achieve objectives. I prioritize my responsibilities and manage my time effectively to ensure
+                        that I stay productive and organized.</p>
+                    <div class="skill-images">
+                        <img src="./img/skill-4.jpg" alt="Self-Discipline">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nor Asmira. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
